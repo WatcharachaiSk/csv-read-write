@@ -16,6 +16,8 @@ fs.createReadStream("path/parser/file.csv")
     for (let index = 0; index < results.length; index++) {
       const restTF = _.map(results[index], (item, idx) => {
         // console.log(idx);
+
+        // idx != 1 ไม่คำนวนวันที่ วันที่อยู่ที่ idx 1 
         if (item > 3600 && idx != 1) {
           arrP2[j] = results[index];
           j++;
