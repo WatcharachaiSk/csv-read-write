@@ -4,7 +4,7 @@ const _ = require("lodash");
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 
 const results = [];
-
+//TODO นำไฟล์เข้า
 fs.createReadStream("path/parser/file.csv")
   .pipe(csv())
   .on("data", (data) => results.push(data))
@@ -67,6 +67,8 @@ fs.createReadStream("path/parser/file.csv")
       };
     }
     // console.log(arrFOR);
+
+    //TODO นำไฟล์ออก
     const csvWriter = createCsvWriter({
       path: "path/writer/csv/file.csv",
       header: [
